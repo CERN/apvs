@@ -55,7 +55,7 @@
         <moxie-highcharts-version>1.6.0</moxie-highcharts-version>
         <gwtmockito-version>1.1.3</gwtmockito-version>
         <mysql-version>5.1.30</mysql-version>
-        <netty-version>4.0.19.Final</netty-version>
+        <netty-version>4.1.42.Final</netty-version>
         <nettosphere-version>2.1.2</nettosphere-version>
         <ojdbc-jar>ojdbc7</ojdbc-jar>
         <ojdbc-version>12.1.0.1</ojdbc-version>
