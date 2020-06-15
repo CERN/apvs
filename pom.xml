@@ -34,7 +34,7 @@
         <gwt-bootstrap-version>0.8</gwt-bootstrap-version>
         <h2-version>1.3.176</h2-version>
         <hibernate-version>4.3.1.Final</hibernate-version>
-        <hibernate-validator-version>4.1.0.Final</hibernate-validator-version>
+        <hibernate-validator-version>5.3.5.Final</hibernate-validator-version>
         <highcharts-version>3.0.9</highcharts-version>
         <highstock-version>1.3.9</highstock-version>
         <gwt-slf4j-version>0.0.2</gwt-slf4j-version>
