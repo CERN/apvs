@@ -11,8 +11,8 @@ import com.google.gwt.user.client.rpc.IsSerializable;
 public class History implements Serializable, IsSerializable {
 
 	private static final long serialVersionUID = 7456811406485472931L;
-	private Map<Device, DeviceData> map = new HashMap<Device, DeviceData>();
-	private Map<String, String> units = new HashMap<String, String>();
+	private final Map<Device, DeviceData> map = new HashMap<Device, DeviceData>();
+	private final Map<String, String> units = new HashMap<String, String>();
 	
 	public History() {
 	}

@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class UpdatedEntity {
 
-	private Database database;
+	private final Database database;
 
 	public UpdatedEntity(Database database, int delay, TimeUnit unit) {
 		this.database = database;

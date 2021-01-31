@@ -19,13 +19,13 @@ import org.slf4j.LoggerFactory;
 public class ServerStorage {
 	private static final String APVS_SERVER_SETTINGS_FILE = "APVS.properties";
 	private static final String comment = "APVS Server Settings";
-	private static Logger log = LoggerFactory.getLogger(ServerStorage.class
+	private static final Logger log = LoggerFactory.getLogger(ServerStorage.class
 			.getName());
 
 	private static ServerStorage instance;
 
 	private PropertiesConfiguration config;
-	private File configFile;
+	private final File configFile;
 	private boolean readOnly;
 
 	private ServerStorage() throws FileNotFoundException, IOException {

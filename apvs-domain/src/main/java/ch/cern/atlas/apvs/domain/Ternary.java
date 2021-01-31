@@ -16,9 +16,9 @@ import com.google.gwt.user.client.rpc.IsSerializable;
 public enum Ternary implements Serializable, IsSerializable {
 	True("True"), False("False"), Unknown("Unknown");
 
-	private String s;
+	private final String s;
 	
-	private Ternary(String s) {
+	Ternary(String s) {
 		this.s = s;
 	}
 

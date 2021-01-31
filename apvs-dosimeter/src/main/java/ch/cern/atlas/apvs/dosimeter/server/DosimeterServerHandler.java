@@ -14,9 +14,9 @@ import org.slf4j.LoggerFactory;
 
 public class DosimeterServerHandler extends SimpleChannelUpstreamHandler {
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
-	private Map<Channel, DosimeterSimulator> simulators = new HashMap<Channel, DosimeterSimulator>();
+	private final Map<Channel, DosimeterSimulator> simulators = new HashMap<Channel, DosimeterSimulator>();
 
 	public DosimeterServerHandler() {
 	}

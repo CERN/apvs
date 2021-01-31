@@ -16,7 +16,7 @@ public class InterventionMap implements Serializable, IsSerializable {
 
 	private static final long serialVersionUID = 8868971785801918119L;
 
-	private Map<Device, Intervention> interventions = new HashMap<Device, Intervention>();
+	private final Map<Device, Intervention> interventions = new HashMap<Device, Intervention>();
 
 	public InterventionMap() {
 		// serializable
@@ -93,10 +93,8 @@ public class InterventionMap implements Serializable, IsSerializable {
 			// Description test
 			if ((objList.get(i).getDescription() == null && interventionList
 					.get(i).getDescription() == null)) {
-				;
 			} else if (objList.get(i).getDescription()
 					.equals(interventionList.get(i).getDescription())) {
-				;
 			} else {
 				return false;
 			}
@@ -104,10 +102,8 @@ public class InterventionMap implements Serializable, IsSerializable {
 			// DeviceId test
 			if ((objList.get(i).getDevice() == null && interventionList.get(i)
 					.getDevice() == null)) {
-				;
 			} else if (objList.get(i).getDevice()
 					.equals(interventionList.get(i).getDevice())) {
-				;
 			} else {
 				return false;
 			}
@@ -115,10 +111,8 @@ public class InterventionMap implements Serializable, IsSerializable {
 			// End Time test
 			if ((objList.get(i).getEndTime() == null && interventionList.get(i)
 					.getEndTime() == null)) {
-				;
 			} else if (objList.get(i).getEndTime()
 					.equals(interventionList.get(i).getEndTime())) {
-				;
 			} else {
 				return false;
 			}
@@ -126,17 +120,14 @@ public class InterventionMap implements Serializable, IsSerializable {
 			// Start Time test
 			if ((objList.get(i).getStartTime() == null && interventionList.get(
 					i).getStartTime() == null)) {
-				;
 			} else if (objList.get(i).getStartTime()
 					.equals(interventionList.get(i).getStartTime())) {
-				;
 			} else {
 				return false;
 			}
 
 			// ID test
 			if ((objList.get(i).getId() == interventionList.get(i).getId())) {
-				;
 			} else {
 				return false;
 			}
@@ -144,10 +135,8 @@ public class InterventionMap implements Serializable, IsSerializable {
 			// Impact Number test
 			if ((objList.get(i).getImpactNumber() == null && interventionList
 					.get(i).getImpactNumber() == null)) {
-				;
 			} else if (objList.get(i).getImpactNumber()
 					.equals(interventionList.get(i).getImpactNumber())) {
-				;
 			} else {
 				return false;
 			}
@@ -155,10 +144,8 @@ public class InterventionMap implements Serializable, IsSerializable {
 			// Name test
 			if ((objList.get(i).getName() == null && interventionList.get(i)
 					.getName() == null)) {
-				;
 			} else if (objList.get(i).getName()
 					.equals(interventionList.get(i).getName())) {
-				;
 			} else {
 				return false;
 			}
@@ -166,10 +153,8 @@ public class InterventionMap implements Serializable, IsSerializable {
 			// PTU test
 			if ((objList.get(i).getPtuId() == null && interventionList.get(i)
 					.getPtuId() == null)) {
-				;
 			} else if (objList.get(i).getPtuId()
 					.equals(interventionList.get(i).getPtuId())) {
-				;
 			} else {
 				return false;
 			}
@@ -177,10 +162,8 @@ public class InterventionMap implements Serializable, IsSerializable {
 			// REC Status test
 			if ((objList.get(i).getRecStatus() == null && interventionList.get(
 					i).getRecStatus() == null)) {
-				;
 			} else if (objList.get(i).getRecStatus()
 					.equals(interventionList.get(i).getRecStatus())) {
-				;
 			} else {
 				return false;
 			}
@@ -188,10 +171,8 @@ public class InterventionMap implements Serializable, IsSerializable {
 			// User test
 			if ((objList.get(i).getUser() == null && interventionList.get(i)
 					.getUser() == null)) {
-				;
 			} else if (objList.get(i).getUser()
 					.equals(interventionList.get(i).getUser())) {
-				;
 			} else {
 				return false;
 			}

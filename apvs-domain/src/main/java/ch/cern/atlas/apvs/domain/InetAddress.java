@@ -8,7 +8,7 @@ import com.google.gwt.user.client.rpc.IsSerializable;
 public class InetAddress implements Serializable, IsSerializable {
 
 	private static final long serialVersionUID = -8179909394365726414L;
-	private static InetAddress localHost = new InetAddress(new byte[] {127, 0, 0, 1});
+	private static final InetAddress localHost = new InetAddress(new byte[] {127, 0, 0, 1});
 	private byte[] address;
 
 	protected InetAddress() {

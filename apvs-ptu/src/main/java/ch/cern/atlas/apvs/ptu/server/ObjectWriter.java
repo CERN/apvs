@@ -7,15 +7,15 @@ import ch.cern.atlas.apvs.domain.Ptu;
 
 public interface ObjectWriter {
 
-	public void write(Object obj) throws IOException;
+	void write(Object obj) throws IOException;
 	
-	public void write(Ptu ptu) throws IOException;
+	void write(Ptu ptu) throws IOException;
 
-	public void write(Message message) throws IOException;
+	void write(Message message) throws IOException;
 
-	public void flush() throws IOException;
+	void flush() throws IOException;
 
-	public void close() throws IOException;
+	void close() throws IOException;
 
-	public void newLine() throws IOException;
+	void newLine() throws IOException;
 }

@@ -10,8 +10,8 @@ public class CircularList<T> extends AbstractList<T> implements RandomAccess {
 
 	private final int n;
 	private final List<T> list;
-	private int head = 0;
-	private int tail = 0;
+	private int head;
+	private int tail;
 
 	public CircularList(int capacity) {
 		n = capacity + 1;

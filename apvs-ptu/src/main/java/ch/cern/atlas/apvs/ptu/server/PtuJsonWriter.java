@@ -4,6 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.Iterator;
 
@@ -138,6 +139,6 @@ public class PtuJsonWriter extends JsonWriter implements ObjectWriter {
 		PtuJsonWriter writer = new PtuJsonWriter(stream);
 		writer.write(item);
 		writer.close();
-		return new String(stream.toByteArray(), "UTF-8");
+		return new String(stream.toByteArray(), StandardCharsets.UTF_8);
 	}
 }

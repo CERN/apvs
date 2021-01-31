@@ -35,7 +35,7 @@ import java.util.Map;
 public class JsonObject<K, V> extends LinkedHashMap<K, V>
 {
     Object target;
-    boolean isMap = false;
+    boolean isMap;
     String type;
     long id = -1;
     long pos = -1;   // Parse position of Object (used for error messages)

@@ -19,6 +19,7 @@ import java.io.Writer;
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -70,7 +71,7 @@ import static org.junit.Assert.assertTrue;
 @FixMethodOrder(MethodSorters.JVM)
 public class TestJsonReaderWriter
 {
-    public static boolean _debug = false;
+    public static boolean _debug;
     public static Date _testDate = new Date();
     public static Character _CONST_CHAR = new Character('j');
     public static Byte _CONST_BYTE = new Byte((byte) 16);
@@ -140,7 +141,7 @@ public class TestJsonReaderWriter
 
     private static class TestObjectKid extends TestObject implements Serializable
     {
-        private String _email;
+        private final String _email;
 
         TestObjectKid(String name, String email)
         {
@@ -2524,15 +2525,8 @@ public class TestJsonReaderWriter
             _range = s.toString();
 
             // BYZANTINE MUSICAL SYMBOL PSILI
-            try
-            {
-                byte[] symbol = {(byte) 0xf0, (byte) 0x9d, (byte) 0x80, (byte) 0x80};
-                _utf8HandBuilt = new String(symbol, "UTF-8");
-            }
-            catch (UnsupportedEncodingException e)
-            {
-                System.out.println("Get a new JVM that supports UTF-8");
-            }
+            byte[] symbol = {(byte) 0xf0, (byte) 0x9d, (byte) 0x80, (byte) 0x80};
+            _utf8HandBuilt = new String(symbol, StandardCharsets.UTF_8);
 
             _strArray = new String[] {"1st", "2nd", _null, null, new String("3rd")};
             _objArray = new Object[] {"1st", "2nd", _null, null, new String("3rd")};
@@ -2556,7 +2550,7 @@ public class TestJsonReaderWriter
         }
 
         // UTF-8 serialization makes it through clean.
-        byte[] bytes = that._utf8HandBuilt.getBytes("UTF-8");
+        byte[] bytes = that._utf8HandBuilt.getBytes(StandardCharsets.UTF_8);
 //        assertTrue(bytes[0] == (byte) 0xf0);
 //        assertTrue(bytes[1] == (byte) 0x9d);
 //        assertTrue(bytes[2] == (byte) 0x80);
@@ -2683,7 +2677,7 @@ public class TestJsonReaderWriter
 
     private static class TestClass implements Serializable
     {
-        private List _classes_a;
+        private final List _classes_a;
 
         private final Class _booleanClass;
         private final Class _BooleanClass;
@@ -3867,7 +3861,7 @@ public class TestJsonReaderWriter
         JsonWriter writer = new JsonWriter(ba);
         writer.write(o);
         writer.close();
-        String s = new String(ba.toByteArray(), "UTF-8");
+        String s = new String(ba.toByteArray(), StandardCharsets.UTF_8);
         assertTrue(json.equals(s));
     }
 
@@ -4091,7 +4085,7 @@ public class TestJsonReaderWriter
 
         private final String val;
 
-        private TestEnum3(String val)
+        TestEnum3(String val)
         {
             this.val = val;
         }
@@ -4974,12 +4968,12 @@ public class TestJsonReaderWriter
 
     static class MyBooleanTesting
     {
-        private boolean myBoolean = false;
+        private final boolean myBoolean;
     }
 
     static class MyBoolean2Testing
     {
-        private Boolean myBoolean = false;
+        private final Boolean myBoolean = false;
     }
 
     @Test
@@ -5119,7 +5113,7 @@ public class TestJsonReaderWriter
 
     private static class ObjectDateField
     {
-        private Object date;
+        private final Object date;
         private ObjectDateField(Object date)
         {
             this.date = date;
@@ -5128,7 +5122,7 @@ public class TestJsonReaderWriter
 
     private static class DateField
     {
-        private Date date;
+        private final Date date;
         private DateField(Date date)
         {
             this.date = date;
@@ -5137,7 +5131,7 @@ public class TestJsonReaderWriter
 
     private static class SqlDateField
     {
-        private java.sql.Date date;
+        private final java.sql.Date date;
         private SqlDateField(java.sql.Date date)
         {
             this.date = date;
@@ -5145,7 +5139,7 @@ public class TestJsonReaderWriter
     }
     private static class TimestampField
     {
-        private Timestamp date;
+        private final Timestamp date;
         private TimestampField(Timestamp date)
         {
             this.date = date;
@@ -5428,7 +5422,7 @@ public class TestJsonReaderWriter
         jsonWriter.flush();
         jsonWriter.close();
         long endWrite1 = System.nanoTime();
-        String json = new String(bout.toByteArray(), "UTF-8");
+        String json = new String(bout.toByteArray(), StandardCharsets.UTF_8);
 
         try
         {

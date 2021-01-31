@@ -39,7 +39,7 @@ public class MeasurementConfiguration implements Message, Serializable, IsSerial
 	private Double slope;
 	private Double offset;
 	
-	private String type = "MeasurementConfiguration";
+	private final String type = "MeasurementConfiguration";
 
 	protected MeasurementConfiguration() {
 	}

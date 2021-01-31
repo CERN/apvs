@@ -23,10 +23,10 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.SerializationException;
 
 public class AtmosphereEventBus extends RemoteEventBus {
-	private Logger log = LoggerFactory.getLogger(getClass());
+	private final Logger log = LoggerFactory.getLogger(getClass());
 
 	private Atmosphere client;
-	private AtmosphereRequest request;
+	private final AtmosphereRequest request;
 
 	// NOTE serializer can be null, but note the exception in #284, thrown in "compiled" mode
 	public AtmosphereEventBus(GwtRpcClientSerializer serializer) {

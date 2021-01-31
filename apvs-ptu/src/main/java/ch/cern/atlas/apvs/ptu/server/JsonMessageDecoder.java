@@ -17,8 +17,8 @@ import ch.cern.atlas.apvs.domain.Packet;
 
 public class JsonMessageDecoder extends ReplayingDecoder<Void> {
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
-	private Map<String, Device> devices;
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Map<String, Device> devices;
 	
 	public JsonMessageDecoder(Map<String, Device> devices) {
 		this.devices = devices;

@@ -32,8 +32,8 @@ public abstract class RemoteEvent<H> implements Serializable, IsSerializable {
 	}
 	
 	private String sourceClassName;
-	private Integer uuid = null;
-	private Long eventBusUUID = null;
+	private Integer uuid;
+	private Long eventBusUUID;
 
 	protected RemoteEvent() {
 	}

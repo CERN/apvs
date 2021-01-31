@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 
 public class PtuPullServer {
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
 	private final int port;
 	private final int refresh;

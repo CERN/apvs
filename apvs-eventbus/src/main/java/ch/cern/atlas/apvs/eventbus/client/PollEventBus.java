@@ -15,7 +15,7 @@ public class PollEventBus extends RemoteEventBus {
 
 //	private Logger log = LoggerFactory.getLogger(getClass().getName());
 	
-	private EventBusServiceAsync eventBusService;
+	private final EventBusServiceAsync eventBusService;
 	
 	public PollEventBus() {
 		this(null);

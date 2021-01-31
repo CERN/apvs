@@ -1,19 +1,17 @@
 package com.cedarsoftware.util.io;
 
-import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.Closeable;
 import java.io.FilterReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.Reader;
-import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -91,7 +89,7 @@ public class JsonReader implements Closeable
     private final Collection<UnresolvedReference> _unresolvedRefs = new ArrayList<UnresolvedReference>();
     private final Collection<Object[]> _prettyMaps = new ArrayList<Object[]>();
     private final FastPushbackReader _in;
-    private boolean _noObjects = false;
+    private boolean _noObjects;
     private final char[] _numBuf = new char[256];
     private final StringBuilder _strBuf = new StringBuilder();
     private static final Class[] _emptyClassArray = new Class[]{};
@@ -572,9 +570,9 @@ public class JsonReader implements Closeable
      */
     private static class UnresolvedReference
     {
-        private JsonObject referencingObj;
+        private final JsonObject referencingObj;
         private String field;
-        private long refId;
+        private final long refId;
         private int index = -1;
 
         private UnresolvedReference(JsonObject referrer, String fld, long id)
@@ -620,7 +618,7 @@ public class JsonReader implements Closeable
      */
     public static Object jsonToJava(String json) throws IOException
     {
-        ByteArrayInputStream ba = new ByteArrayInputStream(json.getBytes("UTF-8"));
+        ByteArrayInputStream ba = new ByteArrayInputStream(json.getBytes(StandardCharsets.UTF_8));
         JsonReader jr = new JsonReader(ba, false);
         Object obj = jr.readObject();
         jr.close();
@@ -662,7 +660,7 @@ public class JsonReader implements Closeable
      */
     public static Map jsonToMaps(String json) throws IOException
     {
-        ByteArrayInputStream ba = new ByteArrayInputStream(json.getBytes("UTF-8"));
+        ByteArrayInputStream ba = new ByteArrayInputStream(json.getBytes(StandardCharsets.UTF_8));
         JsonReader jr = new JsonReader(ba, true);
         Map map = (Map) jr.readObject();
         jr.close();

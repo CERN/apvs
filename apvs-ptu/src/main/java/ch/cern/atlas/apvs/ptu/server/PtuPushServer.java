@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 
 public class PtuPushServer {
 
-	private static Logger log = LoggerFactory.getLogger(PtuPushServer.class.getName());
+	private static final Logger log = LoggerFactory.getLogger(PtuPushServer.class.getName());
 
 	private final String host;
 	private final int port;

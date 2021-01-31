@@ -14,7 +14,7 @@ import com.cedarsoftware.util.io.JsonReader.FastPushbackReader;
  */
 public class NoBufferPushbackReader extends FastPushbackReader {
          
-        private InputStream in;
+        private final InputStream in;
 
     	public NoBufferPushbackReader(InputStream in) {
     		super(new Reader() {

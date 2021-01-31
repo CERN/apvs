@@ -19,11 +19,11 @@ import ch.cern.atlas.apvs.domain.Dosimeter;
 
 public class DosimeterSimulator extends Thread {
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 	
 	private final Channel channel;
 	private final Random random = new Random();
-	private int noOfDosimeters = 5;
+	private final int noOfDosimeters = 5;
 
 	public DosimeterSimulator(Channel channel) {
 		this.channel = channel;

@@ -3,6 +3,7 @@ package ch.cern.atlas.apvs.ptu;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.UnknownHostException;
+import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.util.List;
 
@@ -25,7 +26,7 @@ import ch.cern.atlas.apvs.ptu.server.PtuServerConstants;
 
 public class PtuJsonTest {
 
-	private Logger log = LoggerFactory.getLogger(getClass());
+	private final Logger log = LoggerFactory.getLogger(getClass());
 	
 	String json = "{"
 			+ "\"Sender\":\"PTU_88\",\"Receiver\":\"Broadcast\",\"FrameID\":\"0\",\"Acknowledge\":\"False\",\"Messages\":["
@@ -60,7 +61,7 @@ public class PtuJsonTest {
 	@Test
 	public void streamReaderTest() throws IOException {
 		ByteArrayInputStream ba = new ByteArrayInputStream(
-				(json + json).getBytes("UTF-8"));
+				(json + json).getBytes(StandardCharsets.UTF_8));
 //		log.info("Len "+json.length());
 		PtuJsonReader jr = new PtuJsonReader(ba, true);
 		JsonHeader packet1 = (JsonHeader) jr.readObject();

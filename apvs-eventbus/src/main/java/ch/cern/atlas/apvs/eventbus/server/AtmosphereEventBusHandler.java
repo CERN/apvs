@@ -24,7 +24,7 @@ import ch.cern.atlas.apvs.eventbus.shared.RequestRemoteEvent;
  */
 public class AtmosphereEventBusHandler extends ReflectorServletProcessor {
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
 	private final static boolean DEBUG = true;
 

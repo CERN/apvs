@@ -47,7 +47,7 @@ public class DosimeterClientHandler extends SimpleChannelUpstreamHandler {
 
 	private static final int RECONNECT_DELAY = 20;
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 	private final ClientBootstrap bootstrap;
 	private final RemoteEventBus eventBus;
 
@@ -59,7 +59,7 @@ public class DosimeterClientHandler extends SimpleChannelUpstreamHandler {
 	private Map<String, Dosimeter> dosimeters;
 	private Map<String, String> dosimeterToPtu;
 
-	private boolean LOG_TO_FILE = false;
+	private final boolean LOG_TO_FILE;
 	private FileHandler logHandler;
 
 	@SuppressWarnings("serial")

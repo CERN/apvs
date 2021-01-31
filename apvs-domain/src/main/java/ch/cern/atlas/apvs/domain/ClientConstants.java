@@ -5,11 +5,11 @@ import com.google.gwt.i18n.client.DateTimeFormat;
 public interface ClientConstants {
 //	public TimeZoneConstants timeZoneConstants = GWT.create(TimeZoneConstants.class);
 //	public static final TimeZone timeZone = TimeZone.createTimeZone(timeZoneConstants.europeZurich());
-	public static final DateTimeFormat simpleDateFormat = DateTimeFormat.getFormat("dd/MM/yyyy HH:mm:ss");
-	public static final DateTimeFormat dateFormat = DateTimeFormat.getFormat("dd MMM yyyy HH:mm:ss");
-	public static final DateTimeFormat dateFormatNoSeconds = DateTimeFormat.getFormat("dd MMM yyyy HH:mm");
-	public static final DateTimeFormat dateFormatShort = DateTimeFormat.getFormat("dd MMM HH:mm");
-	public static final DateTimeFormat dateFormatOnly = DateTimeFormat.getFormat("dd-MM-yy");
-	public static final DateTimeFormat timeFormat = DateTimeFormat.getFormat("HH:mm:ss");
-	public static final DateTimeFormat timeFormatNoSeconds = DateTimeFormat.getFormat("HH:mm");
+DateTimeFormat simpleDateFormat = DateTimeFormat.getFormat("dd/MM/yyyy HH:mm:ss");
+	DateTimeFormat dateFormat = DateTimeFormat.getFormat("dd MMM yyyy HH:mm:ss");
+	DateTimeFormat dateFormatNoSeconds = DateTimeFormat.getFormat("dd MMM yyyy HH:mm");
+	DateTimeFormat dateFormatShort = DateTimeFormat.getFormat("dd MMM HH:mm");
+	DateTimeFormat dateFormatOnly = DateTimeFormat.getFormat("dd-MM-yy");
+	DateTimeFormat timeFormat = DateTimeFormat.getFormat("HH:mm:ss");
+	DateTimeFormat timeFormatNoSeconds = DateTimeFormat.getFormat("HH:mm");
 }

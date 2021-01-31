@@ -11,7 +11,7 @@ public class Procedure extends DirectoryEntry implements Serializable, IsSeriali
 
 	private static final long serialVersionUID = 4875978323097992653L;
 
-	private List<Step> steps = new ArrayList<Step>();
+	private final List<Step> steps = new ArrayList<Step>();
 	
 	protected Procedure() {
 	}

@@ -23,12 +23,12 @@ import com.google.web.bindery.event.shared.HandlerRegistration;
 @Sharable
 public class MessageToBus extends SimpleChannelInboundHandler<Packet> {
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
-	private String prefix;
-	private EventBus bus;
+	private final String prefix;
+	private final EventBus bus;
 	private ChannelHandlerContext ctx;
-	private HandlerRegistration handler;
+	private final HandlerRegistration handler;
 	private Device device;
 
 	public MessageToBus(final String prefix, EventBus bus) {
@@ -133,7 +133,7 @@ public class MessageToBus extends SimpleChannelInboundHandler<Packet> {
 			default:
 				log.warn("Unknown idle state "+evt+" for "+remote);
 				break;
-			};
+			}
 		} else {
 			super.userEventTriggered(ctx, evt);
 		}

@@ -4,7 +4,6 @@ import io.netty.channel.Channel;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 
-import java.io.IOException;
 import java.util.Date;
 import java.util.Random;
 
@@ -24,9 +23,9 @@ import ch.cern.atlas.apvs.domain.Report;
 
 public class PtuSimulator extends Thread {
 
-	private static boolean DEBUG_PARTIAL_MESSAGES = false;
+	private static final boolean DEBUG_PARTIAL_MESSAGES;
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
 	private final Channel channel;
 	private final Random random = new Random();

@@ -8,7 +8,7 @@ import ch.cern.atlas.apvs.eventbus.shared.RemoteEventBus;
 
 public class ServerEventBus extends RemoteEventBus {
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
 	private static ServerEventBus instance;
 
