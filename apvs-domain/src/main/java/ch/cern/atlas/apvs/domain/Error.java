@@ -11,7 +11,7 @@ public class Error implements Message, Serializable, IsSerializable {
 	private static final long serialVersionUID = -7278595154796058932L;
 
 	private volatile Device device;
-	private String type = "Error";
+	private final String type = "Error";
 	private Integer errorNo;
 	private String description;
 	private String criticality;

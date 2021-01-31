@@ -34,7 +34,7 @@ public class GeneralConfiguration implements Message, Serializable,
 	private String bssid;
 	private Date time;
 
-	private String type = "GeneralConfiguration";
+	private final String type = "GeneralConfiguration";
 
 	protected GeneralConfiguration() {
 	}

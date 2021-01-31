@@ -12,7 +12,7 @@ public class Order implements Message, Serializable, IsSerializable {
 	private volatile Device device;
 	private String parameter;
 	private String value;
-	private String type = "Order";
+	private final String type = "Order";
 
 	protected Order() {
 	}

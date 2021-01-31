@@ -8,7 +8,7 @@ import ch.cern.atlas.apvs.domain.Message;
 
 public class JsonHeader {
 
-	transient static int currentFrameID = 0;
+	transient static int currentFrameID;
 	
 	String sender;
 	String receiver;

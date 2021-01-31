@@ -41,9 +41,9 @@ public class RemoteEventBus extends SimpleEventBus {
 		void execute();
 	}
 
-	private Long uuid = UUID.uuidLong(8);
+	private final Long uuid = UUID.uuidLong(8);
 
-	private int firingDepth = 0;
+	private int firingDepth;
 
 	private List<Command> deferredDeltas;
 

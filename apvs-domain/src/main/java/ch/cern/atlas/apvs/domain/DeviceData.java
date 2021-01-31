@@ -13,7 +13,7 @@ public class DeviceData implements Serializable, IsSerializable {
 
 	private static final long serialVersionUID = 2719767332984866247L;
 	private Device device;
-	private Map<String, Data> map = new HashMap<String, Data>();
+	private final Map<String, Data> map = new HashMap<String, Data>();
 	
 	protected DeviceData() {
 	}

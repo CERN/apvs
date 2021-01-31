@@ -27,7 +27,7 @@ public class VideoStartStop implements Message, Serializable, IsSerializable {
 				.getImpactNumber() : "";
 		String name = intervention.getName() != null ? intervention.getName()
 				: "";
-		fileName = Integer.toString(intervention.getId()) + "_" + impactNumber
+		fileName = intervention.getId() + "_" + impactNumber
 				+ "_" + name;
 	}
 

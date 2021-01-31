@@ -3,6 +3,7 @@ package ch.cern.atlas.apvs.ptu.server;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.LinkedList;
 
@@ -14,7 +15,7 @@ import com.cedarsoftware.util.io.JsonReader;
 
 public class PtuJsonReader extends JsonReader {
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 	
 	public PtuJsonReader(InputStream in) {
 		this(in, true);
@@ -64,7 +65,7 @@ public class PtuJsonReader extends JsonReader {
 
 	public static JsonHeader jsonToJava(String json) throws IOException {
 		ByteArrayInputStream ba = new ByteArrayInputStream(
-				json.getBytes("UTF-8"));
+				json.getBytes(StandardCharsets.UTF_8));
 		// NOTE: noObjects as we decode ourselves
 		PtuJsonReader jr = new PtuJsonReader(ba, true);
 		JsonHeader result = (JsonHeader) jr.readObject();

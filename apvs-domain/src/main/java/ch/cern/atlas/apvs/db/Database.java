@@ -48,13 +48,13 @@ import ch.cern.atlas.apvs.util.CircularList;
 import ch.cern.atlas.apvs.util.StringUtils;
 
 public class Database {
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
 	private static Database instance;
 
-	private Configuration configuration;
-	private ServiceRegistry serviceRegistry;
-	private SessionFactory sessionFactory;
+	private final Configuration configuration;
+	private final ServiceRegistry serviceRegistry;
+	private final SessionFactory sessionFactory;
 
 	protected Database(Configuration configuration) {
 		this.configuration = configuration;

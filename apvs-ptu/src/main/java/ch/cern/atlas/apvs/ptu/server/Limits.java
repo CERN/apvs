@@ -12,8 +12,8 @@ import java.util.Map;
  */
 public class Limits {
 
-	private static Map<String, Number> high = new HashMap<String, Number>();
-	private static Map<String, Number> low = new HashMap<String, Number>();
+	private static final Map<String, Number> high = new HashMap<String, Number>();
+	private static final Map<String, Number> low = new HashMap<String, Number>();
 	
 	static {
 		low.put("BodyTemperature", 35);

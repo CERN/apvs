@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 import ch.cern.atlas.apvs.domain.Device;
 
 public class Devices extends UpdatedEntity {
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
 	private final static int DELAY = 10;
 	private final static TimeUnit UNIT = TimeUnit.SECONDS;

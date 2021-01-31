@@ -11,7 +11,7 @@ public class Report implements Message, Serializable, IsSerializable {
 	private static final long serialVersionUID = -2218198847285152101L;
 
 	private volatile Device device;
-	private String type = "Report";
+	private final String type = "Report";
 	private Number batteryLevel;
 	private boolean cameraHandheld;
 	private boolean cameraHelmet;

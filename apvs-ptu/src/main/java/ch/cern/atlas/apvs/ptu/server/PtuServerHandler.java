@@ -15,9 +15,9 @@ import org.slf4j.LoggerFactory;
 
 public class PtuServerHandler extends ChannelInboundHandlerAdapter {
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
-	private Map<Channel, List<PtuSimulator>> simulators = new HashMap<Channel, List<PtuSimulator>>();
+	private final Map<Channel, List<PtuSimulator>> simulators = new HashMap<Channel, List<PtuSimulator>>();
 	private String[] ptuIds = { "PTU_78347", "PTU_82098", "PTU_37309",
 			"PTU_27372", "PTU_39400", "PTU_88982" };
 

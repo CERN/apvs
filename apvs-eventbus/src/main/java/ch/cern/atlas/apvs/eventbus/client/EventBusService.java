@@ -13,8 +13,8 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath("eventBusService")
 public interface EventBusService extends RemoteService {
 	
-	public void fireEvent(RemoteEvent<?> event);
+	void fireEvent(RemoteEvent<?> event);
 	
-	public List<RemoteEvent<?>> getQueuedEvents(Long eventBusUUID);
+	List<RemoteEvent<?>> getQueuedEvents(Long eventBusUUID);
 	
 }

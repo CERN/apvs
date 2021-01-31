@@ -12,7 +12,7 @@ import ch.cern.atlas.apvs.domain.Packet;
 
 public class JsonMessageEncoder extends MessageToByteEncoder<Packet> {
 
-	private Logger log = LoggerFactory.getLogger(getClass());
+	private final Logger log = LoggerFactory.getLogger(getClass());
 
 	public JsonMessageEncoder() {
 	}

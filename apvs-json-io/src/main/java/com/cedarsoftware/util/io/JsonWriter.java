@@ -14,6 +14,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -80,7 +81,7 @@ public class JsonWriter implements Closeable, Flushable
     private static final Map<String, ClassMeta> _classMetaCache = new HashMap<String, ClassMeta>();
     private static final List<Object[]> _writers  = new ArrayList<Object[]>();
     private static final Set<Class> _notCustom = new HashSet<Class>();
-    private static Object[] _byteStrings = new Object[256];
+    private static final Object[] _byteStrings = new Object[256];
     protected final Writer _out;
     private long _identity = 1;
     static final ThreadLocal<SimpleDateFormat> _dateFormat = new ThreadLocal<SimpleDateFormat>()
@@ -500,19 +501,12 @@ public class JsonWriter implements Closeable, Flushable
         JsonWriter writer = new JsonWriter(stream);
         writer.write(item);
         writer.close();
-        return new String(stream.toByteArray(), "UTF-8");
+        return new String(stream.toByteArray(), StandardCharsets.UTF_8);
     }
 
     public JsonWriter(OutputStream out) throws IOException
     {
-        try
-        {
-            _out = new BufferedWriter(new OutputStreamWriter(out, "UTF-8"));
-        }
-        catch (UnsupportedEncodingException e)
-        {
-            throw new IOException("Unsupported encoding.  Get a JVM that supports UTF-8", e);
-        }
+        _out = new BufferedWriter(new OutputStreamWriter(out, StandardCharsets.UTF_8));
     }
 
     public void write(Object obj) throws IOException

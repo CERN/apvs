@@ -39,7 +39,7 @@ public class AtmospherePollService extends AbstractRemoteServiceServlet
 	public final static String GWT_REQUEST = "GWT_REQUEST";
 
 	public class SuspendInfo {
-		private AtmosphereResource atm;
+		private final AtmosphereResource atm;
 
 		SuspendInfo(AtmosphereResource atm) {
 			this.atm = atm;

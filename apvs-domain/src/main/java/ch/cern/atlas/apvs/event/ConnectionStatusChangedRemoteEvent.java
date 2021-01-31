@@ -23,9 +23,9 @@ public class ConnectionStatusChangedRemoteEvent extends
 				"DAQ Status"), dosimeter("Dosimeter Status"), databaseConnect(
 				"DB Connect Status"), databaseUpdate("DB Update Status");
 
-		private String s;
+		private final String s;
 
-		private ConnectionType(String s) {
+		ConnectionType(String s) {
 			this.s = s;
 		}
 

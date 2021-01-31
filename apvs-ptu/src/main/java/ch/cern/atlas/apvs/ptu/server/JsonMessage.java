@@ -21,31 +21,31 @@ import com.cedarsoftware.util.io.JsonObject;
 
 public class JsonMessage {
 
-	private static Logger log = LoggerFactory.getLogger(JsonMessage.class
+	private static final Logger log = LoggerFactory.getLogger(JsonMessage.class
 			.getName());
 	
-	private static String TYPE = "Type";
-	private static String SENSOR = "Sensor";
-	private static String UNIT = "Unit";
-	private static String VALUE = "Value";
-	private static String TIME = "Time";
-	private static String SAMPLING_RATE = "SamplingRate";
-	private static String UP_THRESHOLD = "UpThreshold";
-	private static String DOWN_THRESHOLD = "DownThreshold";
-	private static String METHOD = "Method";
-	private static String THRESHOLD = "Threshold";
-	private static String DESCRIPTION = "Description";
-	private static String CRITICALITY = "Criticality";
-	private static String DOSIMETER_ID = "DosimeterID";
-	private static String BSSID = "bssid";
-	private static String SLOPE = "Slope";
-	private static String OFFSET = "Offset";
-	private static String NAME = "Name";
-	private static String PARAMETER = "Parameter";
-	private static String BATTERY_LEVEL = "BatteryLevel";
-	private static String CAMERA_HANDHELD = "CameraHandheld";
-	private static String CAMERA_HELMET = "CameraHelmet";
-	private static String AUDIO = "Audio";
+	private static final String TYPE = "Type";
+	private static final String SENSOR = "Sensor";
+	private static final String UNIT = "Unit";
+	private static final String VALUE = "Value";
+	private static final String TIME = "Time";
+	private static final String SAMPLING_RATE = "SamplingRate";
+	private static final String UP_THRESHOLD = "UpThreshold";
+	private static final String DOWN_THRESHOLD = "DownThreshold";
+	private static final String METHOD = "Method";
+	private static final String THRESHOLD = "Threshold";
+	private static final String DESCRIPTION = "Description";
+	private static final String CRITICALITY = "Criticality";
+	private static final String DOSIMETER_ID = "DosimeterID";
+	private static final String BSSID = "bssid";
+	private static final String SLOPE = "Slope";
+	private static final String OFFSET = "Offset";
+	private static final String NAME = "Name";
+	private static final String PARAMETER = "Parameter";
+	private static final String BATTERY_LEVEL = "BatteryLevel";
+	private static final String CAMERA_HANDHELD = "CameraHandheld";
+	private static final String CAMERA_HELMET = "CameraHelmet";
+	private static final String AUDIO = "Audio";
 	
 	protected JsonObject<String, Object> msg;
 

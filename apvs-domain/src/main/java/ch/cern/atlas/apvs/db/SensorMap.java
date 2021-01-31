@@ -7,7 +7,7 @@ import ch.cern.atlas.apvs.domain.Device;
 
 public class SensorMap {
 
-	private Map<String, Boolean> enabled;
+	private final Map<String, Boolean> enabled;
 	
 	public SensorMap() {
 		enabled = new HashMap<String, Boolean>();

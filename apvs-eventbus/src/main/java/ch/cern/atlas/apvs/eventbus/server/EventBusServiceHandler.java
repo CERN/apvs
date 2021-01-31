@@ -29,10 +29,10 @@ import com.google.gwt.user.server.rpc.SerializationPolicy;
 public class EventBusServiceHandler extends AtmospherePollService implements
 		EventBusService {
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
 	private ServerEventBus eventBus;
-	private Map<Long, ClientInfo> clients = new HashMap<Long, EventBusServiceHandler.ClientInfo>();
+	private final Map<Long, ClientInfo> clients = new HashMap<Long, EventBusServiceHandler.ClientInfo>();
 
 	private final static boolean DEBUG = false;
 

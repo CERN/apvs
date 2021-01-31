@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 public class DosimeterServer {
 
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 	
 	private final int port = 4001;
 

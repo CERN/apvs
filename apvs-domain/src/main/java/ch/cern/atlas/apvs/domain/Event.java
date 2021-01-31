@@ -30,7 +30,7 @@ public class Event implements Message, Serializable, IsSerializable {
 
 	private volatile int id;
 	private volatile Device device;
-	private String type = "Event";
+	private final String type = "Event";
 	private String sensor;
 	private String eventType;
 	private Double value;

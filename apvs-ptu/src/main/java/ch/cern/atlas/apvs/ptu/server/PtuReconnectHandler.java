@@ -24,10 +24,10 @@ import ch.cern.atlas.apvs.domain.Packet;
 
 public abstract class PtuReconnectHandler extends SimpleChannelInboundHandler<Packet> {
 	private static final int RECONNECT_DELAY = 20;
-	private Logger log = LoggerFactory.getLogger(getClass().getName());
+	private final Logger log = LoggerFactory.getLogger(getClass().getName());
 
-	private Bootstrap bootstrap;
-	private String name;
+	private final Bootstrap bootstrap;
+	private final String name;
 
 	private InetSocketAddress address;
 	private ChannelHandlerContext ctx;

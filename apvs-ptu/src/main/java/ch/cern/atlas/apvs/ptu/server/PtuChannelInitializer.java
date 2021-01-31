@@ -11,9 +11,9 @@ import ch.cern.atlas.apvs.domain.Device;
 
 public class PtuChannelInitializer extends ChannelInitializer<SocketChannel> {
 
-	private boolean handleIdle;
-	private ChannelInboundHandlerAdapter handler;
-	private Map<String, Device> devices;
+	private final boolean handleIdle;
+	private final ChannelInboundHandlerAdapter handler;
+	private final Map<String, Device> devices;
 
 	public PtuChannelInitializer(ChannelInboundHandlerAdapter handler, Map<String, Device> devices, boolean handleIdle) {
 		this.handleIdle = handleIdle;
