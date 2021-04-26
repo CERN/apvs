@@ -28,7 +28,7 @@
         <atmosphere-ext-version>2.1.2</atmosphere-ext-version>
         <asterisk-java-version>f8c8f014253745783149ecbe0fed3faa074a7368</asterisk-java-version>
         <commons-configuration-version>2.0-1527979</commons-configuration-version>
-        <commons-io-version>2.4</commons-io-version>
+        <commons-io-version>2.7</commons-io-version>
         <commons-lang-version>2.6</commons-lang-version>
         <eventbinder-version>1.0.2</eventbinder-version>
         <gwt-bootstrap-version>0.8</gwt-bootstrap-version>
